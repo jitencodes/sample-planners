@@ -158,7 +158,22 @@ body.loaded { overflow-y: visible; overflow-x: hidden; }
 
 /* body.nav-active {  overflow-y: visible; overflow-x: hidden; } */
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
 
+::-webkit-scrollbar-track {
+  background-color: hsl(0, 0%, 95%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--midnight-green);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--rich-black-fogra-29);
+}
 
 
 
