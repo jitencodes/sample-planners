@@ -348,6 +348,7 @@ body.nav-active {  overflow-y: auto; overflow-x: hidden; max-width: 100vw; }
   width: calc(100% - 140px);
   height: 1px;
   background-color: var(--white_10);
+  display: none;
 }
 
 .header.active {
@@ -583,7 +584,9 @@ body.nav-active {  overflow-y: auto; overflow-x: hidden; max-width: 100vw; }
   #ABOUT
 \*-----------------------------------*/
 
-.about { padding-block-end: 0; }
+.about { padding-block-end: 0;
+  max-width: 100vw;
+  overflow: hidden; }
 
 .about .container {
   display: grid;
@@ -1041,7 +1044,10 @@ body.nav-active {  overflow-y: auto; overflow-x: hidden; max-width: 100vw; }
   /**
    * HERO
    */
-
+   .header::after{
+    display: block;
+    max-width: 920px;
+   }
   .hero-banner {
     display: block;
     max-width: max-content;
@@ -1112,7 +1118,10 @@ body.nav-active {  overflow-y: auto; overflow-x: hidden; max-width: 100vw; }
    */
 
   .header { padding-block: 24px; }
-
+  .header::after{
+    max-width: 1180px;
+    width: calc(100% - 20px);
+   }
   .nav-open-btn,
   .overlay,
   .navbar-top,
@@ -1192,7 +1201,7 @@ body.nav-active {  overflow-y: auto; overflow-x: hidden; max-width: 100vw; }
 
   .contact-list { justify-content: space-between; }
   .footer-list.grid-column-2{
-    grid-column: 1 / 3;
+    grid-column: 1 / 2;
   }
   .contact-list::after {
     top: 0;
@@ -1206,32 +1215,22 @@ body.nav-active {  overflow-y: auto; overflow-x: hidden; max-width: 100vw; }
 
 }
 
+/* 
 
-.nav-open-btn {
-  color: var(--midnight-green);
-  font-size: 4rem;
+.header {
+  padding-block: 16px !important;
+  background: #fff !important;
 }
-
 .navbar {
   background-color: #fff;
   z-index: 3;
   transition: 0.25s var(--cubic-in);
-  visibility: hidden;
-}
-.header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-block: 16px !important;
-  z-index: 4;
-  background: #fff !important;
-}
-.header a.logo img{
-  width: 90px !important;
 }
 
-.header .navbar-item a{
+.header .navbar .navbar-list .navbar-item a{
+  color: var(--midnight-green_a25);
+}
+.header .navbar .social-list li a{
   color: var(--midnight-green_a25);
 }
 .header .navbar-item a:hover{
@@ -1243,4 +1242,12 @@ body.nav-active {  overflow-y: auto; overflow-x: hidden; max-width: 100vw; }
 }
 .contact-list .contact-item {
   color: #000D60;
-}
+  }
+  .nav-open-btn {
+    color: var(--midnight-green);
+    font-size: 4rem;
+  }
+  .header a.logo img{
+    width: 90px !important;
+    background: #ffffff;
+  } */
